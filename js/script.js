@@ -35,7 +35,7 @@
   window.addEventListener("scroll", updateHeader, { passive: true });
   updateHeader();
 
-  // The semantic cards are the source of truth; content remains available without JavaScript.
+  // The semantic project elements are the source of truth; content remains available without JavaScript.
   document.querySelectorAll("[data-count]").forEach((counter) => {
     const category = counter.dataset.count;
     const selector =
@@ -76,7 +76,7 @@
       );
       document
         .querySelectorAll(
-          ".project-card, .system-card, .intro-grid, .about-grid",
+          ".assessment-group, .system-card, .intro-grid, .about-grid",
         )
         .forEach((item) => reveal.observe(item));
     }

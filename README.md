@@ -35,7 +35,7 @@ O `index.html` está na raiz e os assets usam caminhos relativos, compatíveis c
 
 ## Adicionar um painel
 
-Em `index.html`, copie um `article.project-card` da seção `#analises` para dentro de `.analysis-grid`, antes de `.portfolio-note`. Mantenha `data-category="analise"`. Altere nome, ciclo, badge, descrição, URL e texto acessível dentro de `.sr-only`. Organize do mais recente para o mais antigo. Use a classe `featured` apenas no painel mais recente.
+Em `index.html`, encontre o grupo da avaliação (`article.assessment-group`) na seção `#analises`. Copie um item `<li>` da lista `.assessment-versions`, atualizando a versão, a URL e o nome acessível. Mantenha `data-category="analise"` no link `.version-link`. Ordene as versões da mais recente para a mais antiga dentro de cada avaliação. Para uma nova avaliação, copie um grupo inteiro e atribua um ID único ao título, atualizando `aria-labelledby` e o nome da lista. Os acessos são diretos e não precisam de JavaScript; não há textos descritivos nos grupos.
 
 ## Adicionar um sistema
 
@@ -45,7 +45,7 @@ Copie um `article.system-card` da seção `#sistemas` para dentro de `.systems-g
 
 O JavaScript calcula os totais a partir dos atributos `data-category`. Ao alterar o portfólio, atualize também os valores iniciais dos três elementos `data-count` no HTML, preservando os números corretos para navegação sem JavaScript.
 
-Para trocar um endereço, edite o `href` do acesso no card. Preserve `target="_blank"`, `rel="noopener noreferrer"` e a identificação de nova aba. Não confunda URLs de painéis distintos. Os sete endereços iniciais seguem exatamente o briefing.
+Para trocar um endereço, edite o `href` da versão ou do acesso ao sistema. Preserve `target="_blank"`, `rel="noopener noreferrer"` e a identificação de nova aba. Não confunda URLs de painéis distintos. Os sete endereços iniciais seguem exatamente o briefing.
 
 ## Cores e identidade
 
@@ -64,6 +64,6 @@ Edite as variáveis em `:root`, no início de `css/style.css`: `--navy`, `--cyan
 
 Verificação em Microsoft Edge/Chromium nas cinco larguras acima: sete URLs exatas, totais 7/5/2, assets disponíveis sob `/p7data/`, ausência de rolagem horizontal e de erros no console. Menu móvel, Escape com retorno de foco, navegação sem JavaScript e preferência de movimento reduzido verificados. Auditoria automatizada axe-core para WCAG 2 A/AA e 2.1 AA sem violações detectadas em 390 e 1440 pixels; isso não substitui uma auditoria integral de acessibilidade.
 
-Seis destinos responderam HTTP 200. O endereço fornecido do SIEDU (`https://pauloheg33.github.io/SIEDU/login`) respondeu HTTP 404 e foi preservado exatamente como solicitado. Essa pendência pertence ao destino externo. Após o envio, o GitHub informou Pages habilitado, mas a URL pública do portal ainda respondeu HTTP 404. Confira a origem `main` / `/ (root)` em Settings → Pages e aguarde a implantação antes da verificação pública definitiva.
+Seis destinos responderam HTTP 200. O endereço fornecido do SIEDU (`https://pauloheg33.github.io/SIEDU/login`) respondeu HTTP 404 e foi preservado exatamente como solicitado. Essa pendência pertence ao destino externo. A publicação no GitHub Pages foi posteriormente concluída e o portal, CSS, JavaScript e favicon responderam HTTP 200.
 
 © 2026 P7 Data. Todos os direitos reservados.
