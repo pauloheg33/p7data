@@ -64,6 +64,6 @@ Edite as variáveis em `:root`, no início de `css/style.css`: `--navy`, `--cyan
 
 Verificação em Microsoft Edge/Chromium nas cinco larguras acima: sete URLs exatas, totais 7/5/2, assets disponíveis sob `/p7data/`, ausência de rolagem horizontal e de erros no console. Menu móvel, Escape com retorno de foco, navegação sem JavaScript e preferência de movimento reduzido verificados. Auditoria automatizada axe-core para WCAG 2 A/AA e 2.1 AA sem violações detectadas em 390 e 1440 pixels; isso não substitui uma auditoria integral de acessibilidade.
 
-Seis destinos responderam HTTP 200. O endereço fornecido do SIEDU (`https://pauloheg33.github.io/SIEDU/login`) respondeu HTTP 404 e foi preservado exatamente como solicitado. Essa pendência pertence ao destino externo. A publicação pública deste portal ainda depende de habilitar o GitHub Pages conforme as instruções acima.
+Seis destinos responderam HTTP 200. O endereço fornecido do SIEDU (`https://pauloheg33.github.io/SIEDU/login`) respondeu HTTP 404 e foi preservado exatamente como solicitado. Essa pendência pertence ao destino externo. Após o envio, o GitHub informou Pages habilitado, mas a URL pública do portal ainda respondeu HTTP 404. Confira a origem `main` / `/ (root)` em Settings → Pages e aguarde a implantação antes da verificação pública definitiva.
 
 © 2026 P7 Data. Todos os direitos reservados.
