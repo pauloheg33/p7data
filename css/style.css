@@ -756,10 +756,14 @@ h3 {
   width: 100%;
   margin-bottom: 32px;
 }
-.system-card .card-icon {
-  background: #203e52;
-  border-color: #315469;
-  color: var(--cyan);
+.system-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: #fff;
+  padding: 5px;
+  border-radius: 14px;
+  flex-shrink: 0;
 }
 .system-type {
   font-size: 8px;
@@ -807,6 +811,67 @@ h3 {
   letter-spacing: -0.1em;
   color: #ffffff03;
   z-index: -1;
+}
+.system-card--ppdt {
+  background: #101d35;
+  border-color: #314766;
+  border-top: 4px solid #2457d6;
+}
+.system-card--ppdt .system-type {
+  color: #99ced5;
+}
+.system-card--ppdt .button-outline {
+  background: #2457d6;
+  border-color: #2457d6;
+  color: #fff;
+}
+.system-card--ppdt .button-outline:hover {
+  background: #1c46b0;
+  border-color: #7396ef;
+}
+.system-card--siedu {
+  background: #fff;
+  color: #1f2937;
+  border-color: #d4e7dc;
+  border-top: 4px solid #176b4d;
+}
+.system-card--siedu::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 108px;
+  background: linear-gradient(135deg, #166534, #14532d, #0f766e);
+  z-index: -1;
+}
+.system-card--siedu .card-top {
+  margin-bottom: 40px;
+}
+.system-card--siedu .system-type {
+  color: #fff;
+}
+.system-card--siedu h3 > span,
+.system-card--siedu > p {
+  color: #52625c;
+}
+.system-card--siedu .button-outline {
+  background: #176b4d;
+  border-color: #176b4d;
+  color: #fff;
+}
+.system-card--siedu .button-outline:hover {
+  background: #14532d;
+  border-color: #14532d;
+}
+.systems .system-card--siedu a:focus-visible {
+  outline-color: #176b4d;
+}
+.system-card--siedu .system-watermark {
+  color: #176b4d09;
+}
+@media (min-width: 601px) and (max-width: 800px) {
+  .system-card--siedu::before {
+    height: 148px;
+  }
 }
 .about {
   background: var(--white);

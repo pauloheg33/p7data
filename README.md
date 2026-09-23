@@ -53,6 +53,19 @@ Edite as variáveis em `:root`, no início de `css/style.css`: `--navy`, `--cyan
 
 ## Checklist de manutenção
 
+### Identidades dos sistemas
+
+As miniapresentações preservam as marcas observadas nas páginas de acesso em 23/09/2026. PPDT usa azul-marinho `#101d35`, azul royal `#2457d6` e seu emblema; SIEDU usa verde `#176b4d`, gradiente verde e superfície branca com o brasão de Ararendá. Os estilos ficam em `.system-card--ppdt` e `.system-card--siedu`.
+
+Os arquivos foram copiados sem alterações dos próprios sistemas, a pedido do proprietário, para evitar dependência de carregamento externo:
+
+- `assets/images/ppdt-logo.svg`: https://pauloheg33.github.io/PPDT_ARARENDA/logo-blue.svg
+- `assets/images/siedu-logo.png`: https://pauloheg33.github.io/SIEDU/logo.png
+
+Os emblemas identificam apenas os respectivos sistemas. O endereço do SIEDU, antes indisponível, estava acessível na visita de 23/09/2026.
+
+### Verificações
+
 - Conferir todos os projetos, seus links, a ordem e os totais.
 - Testar em 360, 390, 768, 1024 e 1440 pixels, sem cortes ou rolagem horizontal.
 - Navegar com Tab, Shift+Tab, Enter e Escape; conferir menu móvel e foco visível.
