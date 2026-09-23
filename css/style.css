@@ -574,8 +574,8 @@ h3 {
   height: 30px;
 }
 .analyses {
-  padding-top: 82px;
-  scroll-margin-top: 20px;
+  margin-top: 82px;
+  scroll-margin-top: 0;
 }
 .category-heading {
   display: flex;
@@ -1316,7 +1316,7 @@ h3 {
     margin-top: 5px;
   }
   .analyses {
-    padding-top: 50px;
+    margin-top: 50px;
   }
   .category-heading {
     display: block;
