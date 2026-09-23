@@ -3,7 +3,7 @@
 ## Hospedagem e publicação
 
 - Fonte principal: `https://github.com/pauloheg33/p7data.git`.
-- Fluxo planejado: GitHub → branch `main` → Cloudflare Pages → publicação automática a cada push na branch de produção.
+- Fluxo ativo: GitHub → branch `main` → Cloudflare Pages → publicação automática a cada push na branch de produção.
 - Cloudflare Pages: framework `None`, diretório raiz do repositório, sem comando de build, saída `.`.
 - Manter `index.html` na raiz como ponto de entrada. O site deve funcionar na raiz de um domínio Cloudflare Pages e também no subcaminho `/p7data/` do GitHub Pages, quando possível.
 - Não alterar configurações existentes do GitHub Pages por causa da adoção do Cloudflare Pages. Não criar ou modificar infraestrutura sem necessidade ou autorização.
@@ -21,5 +21,5 @@
 
 - Ao modificar arquivos, conferir CSS, JavaScript, imagens, fontes e links internos tanto na raiz quanto no subcaminho do GitHub Pages.
 - Manter o README alinhado com a configuração estática e as instruções de publicação.
-- Alterar `canonical` e `og:url` apenas quando o endereço principal real for confirmado. `https://p7data.pages.dev/` foi fornecido como exemplo, não como publicação verificada.
+- O endereço principal confirmado é `https://p7data.pages.dev/`; manter `canonical` e `og:url` alinhados com ele enquanto não houver domínio próprio.
 - Distinguir preparação do repositório de configuração e publicação efetivamente verificadas no Cloudflare Pages.

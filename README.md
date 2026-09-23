@@ -25,7 +25,7 @@ Acesse http://localhost:8000. Para simular o caminho do GitHub Pages, execute o 
 
 ## Publicar no GitHub Pages
 
-O Cloudflare Pages é o destino principal planejado. A compatibilidade com GitHub Pages continua sendo preservada; sua configuração existente não deve ser alterada apenas por isso.
+O Cloudflare Pages é o destino principal em produção. A compatibilidade com GitHub Pages continua sendo preservada; sua configuração existente não deve ser alterada apenas por isso.
 
 1. Envie os arquivos para a branch `main` de `pauloheg33/p7data`.
 2. No GitHub, abra **Settings → Pages**.
@@ -33,11 +33,11 @@ O Cloudflare Pages é o destino principal planejado. A compatibilidade com GitHu
 4. Selecione **main** e **/ (root)**, e salve.
 5. Aguarde a conclusão da publicação e acesse https://pauloheg33.github.io/p7data/.
 
-O `index.html` está na raiz e os assets usam caminhos relativos, compatíveis com `/p7data/`. O arquivo `.nojekyll` dispensa processamento Jekyll. Não há domínio próprio configurado. Quando houver, atualize `canonical` e `og:url` no HTML e configure o domínio em Pages.
+O `index.html` está na raiz e os assets usam caminhos relativos, compatíveis com `/p7data/`. O arquivo `.nojekyll` dispensa processamento Jekyll. Não há domínio próprio configurado.
 
 ## Publicar no Cloudflare Pages via GitHub
 
-Configuração planejada para conectar este repositório ao Cloudflare Pages gratuito:
+Configuração ativa no Cloudflare Pages gratuito:
 
 | Campo | Valor |
 | --- | --- |
@@ -48,9 +48,9 @@ Configuração planejada para conectar este repositório ao Cloudflare Pages gra
 | Build command | Nenhum (deixar vazio) |
 | Build output directory | `.` |
 
-Depois de conectar o GitHub e salvar essa configuração no Cloudflare Pages, cada push na `main` deverá gerar uma publicação automática. Não há instalação de dependências, build, backend ou banco de dados para servir o site. Python, mencionado na prévia local, é opcional e não faz parte da hospedagem.
+O projeto está publicado em https://p7data.pages.dev/. Cada push na `main` gera uma publicação automática. Não há instalação de dependências, build, backend ou banco de dados para servir o site. Python, mencionado na prévia local, é opcional e não faz parte da hospedagem.
 
-Os arquivos locais usam caminhos relativos e os links internos usam âncoras, funcionando na raiz de um domínio (por exemplo, `https://p7data.pages.dev/`) e no subcaminho do GitHub Pages. O endereço Cloudflare acima é apenas ilustrativo: confirmar a URL atribuída antes de atualizar `canonical` e `og:url`, que atualmente apontam para a publicação existente no GitHub Pages.
+Os arquivos locais usam caminhos relativos e os links internos usam âncoras, funcionando na raiz do domínio Cloudflare Pages e no subcaminho do GitHub Pages. `canonical` e `og:url` apontam para a publicação principal confirmada no Cloudflare Pages.
 
 As regras permanentes de compatibilidade estão em `AGENTS.md`. Qualquer necessidade futura de variáveis de ambiente, Functions, Workers ou outros recursos específicos deve ser explicada antes da implementação. Nunca versionar segredos.
 
