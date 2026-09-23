@@ -25,6 +25,8 @@ Acesse http://localhost:8000. Para simular o caminho do GitHub Pages, execute o 
 
 ## Publicar no GitHub Pages
 
+O Cloudflare Pages é o destino principal planejado. A compatibilidade com GitHub Pages continua sendo preservada; sua configuração existente não deve ser alterada apenas por isso.
+
 1. Envie os arquivos para a branch `main` de `pauloheg33/p7data`.
 2. No GitHub, abra **Settings → Pages**.
 3. Em **Build and deployment**, selecione **Deploy from a branch**.
@@ -32,6 +34,25 @@ Acesse http://localhost:8000. Para simular o caminho do GitHub Pages, execute o 
 5. Aguarde a conclusão da publicação e acesse https://pauloheg33.github.io/p7data/.
 
 O `index.html` está na raiz e os assets usam caminhos relativos, compatíveis com `/p7data/`. O arquivo `.nojekyll` dispensa processamento Jekyll. Não há domínio próprio configurado. Quando houver, atualize `canonical` e `og:url` no HTML e configure o domínio em Pages.
+
+## Publicar no Cloudflare Pages via GitHub
+
+Configuração planejada para conectar este repositório ao Cloudflare Pages gratuito:
+
+| Campo | Valor |
+| --- | --- |
+| Repositório | `pauloheg33/p7data` |
+| Branch de produção | `main` |
+| Framework preset | `None` |
+| Root directory | Raiz do repositório |
+| Build command | Nenhum (deixar vazio) |
+| Build output directory | `.` |
+
+Depois de conectar o GitHub e salvar essa configuração no Cloudflare Pages, cada push na `main` deverá gerar uma publicação automática. Não há instalação de dependências, build, backend ou banco de dados para servir o site. Python, mencionado na prévia local, é opcional e não faz parte da hospedagem.
+
+Os arquivos locais usam caminhos relativos e os links internos usam âncoras, funcionando na raiz de um domínio (por exemplo, `https://p7data.pages.dev/`) e no subcaminho do GitHub Pages. O endereço Cloudflare acima é apenas ilustrativo: confirmar a URL atribuída antes de atualizar `canonical` e `og:url`, que atualmente apontam para a publicação existente no GitHub Pages.
+
+As regras permanentes de compatibilidade estão em `AGENTS.md`. Qualquer necessidade futura de variáveis de ambiente, Functions, Workers ou outros recursos específicos deve ser explicada antes da implementação. Nunca versionar segredos.
 
 ## Adicionar um painel
 
@@ -70,7 +91,7 @@ Os emblemas identificam apenas os respectivos sistemas. O endereço do SIEDU, an
 - Testar em 360, 390, 768, 1024 e 1440 pixels, sem cortes ou rolagem horizontal.
 - Navegar com Tab, Shift+Tab, Enter e Escape; conferir menu móvel e foco visível.
 - Conferir conteúdo com JavaScript desativado e movimento reduzido.
-- Verificar console, carregamento dos assets e acesso pelo subcaminho `/p7data/`.
+- Verificar console, CSS, JavaScript, imagens, fontes e links internos na raiz do domínio Cloudflare Pages e no subcaminho `/p7data/` do GitHub Pages.
 - Revisar português, contraste e títulos; testar a URL pública após ativar Pages.
 
 ## Validação da entrega — 22/09/2026
